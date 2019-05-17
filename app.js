@@ -5,19 +5,19 @@ const cors = require('cors')
 const app = express();
 const port = process.env.PORT || 8080
 
+require('dotenv').config();
 app.use(cors());
 app.disable('x-powered-by');
 app.use(bodyParser.json());
-// require('dotenv').load();
 
 if (process.env.NODE_ENV !== 'production') {
   app.use(morgan('dev'))
 };
 
-// const sms= require('./src/sms');
+const sms= require('./src/routes/text');
 // const vm = require('./src/vm');
 
-// app.use('/sms', auth);
+app.use('/sms', sms);
 // app.use('/vm', user);
 
 app.use(function(req, res, next) {
