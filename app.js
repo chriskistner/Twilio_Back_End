@@ -15,10 +15,10 @@ if (process.env.NODE_ENV !== 'production') {
 };
 
 const sms= require('./src/routes/text');
-// const vm = require('./src/vm');
+const voice = require('./src/routes/voice');
 
 app.use('/sms', sms);
-// app.use('/vm', user);
+app.use('/voice', voice);
 
 app.use(function(req, res, next) {
   next({status: 404, error: 'Route Not Found'})
