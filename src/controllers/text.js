@@ -26,7 +26,7 @@ const recieveText = (req, res, next) => {
     res.writeHead(200, {'Content-Type': 'text/xml'});
 
     res.end(twiml.toString());
-}
+};
 
 module.exports = {
     sendText,
