@@ -8,7 +8,7 @@ const port = process.env.PORT || 8080
 require('dotenv').config();
 app.use(cors());
 app.disable('x-powered-by');
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 if (process.env.NODE_ENV !== 'production') {
   app.use(morgan('dev'))
