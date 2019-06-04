@@ -18,7 +18,6 @@ const sendText = (req, res, next) => {
 };
 
 const recieveText = (req, res, next) => {
-
     const twiml = new messagingResponse();
 
     twiml.message('Take me to your leader');

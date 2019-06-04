@@ -17,7 +17,8 @@
     "dotenv": "^8.0.0",
     "express": "^4.17.0",
     "morgan": "^1.9.1",
-    "twilio": "^3.31.0"
+    "twilio": "^3.31.0",
+    "xml-js": "^1.6.11"
   },
   "devDependencies": {
     "nodemon": "^1.19.0"
